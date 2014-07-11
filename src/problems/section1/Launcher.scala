@@ -9,7 +9,8 @@ object Launcher {
 //    testTask04
 //    testTask05
 //    testTask06
-    testTask07
+//    testTask07
+    testTask08
   }
 
   def testTask01 {
@@ -61,16 +62,15 @@ object Launcher {
           'e'
         )
       )
+    println ( list )
+    println ( Task07 flatten list )
+    println ( Task07 flatten2 list )
+  }
 
-    println (list)
-
-    println {
-      Task07 flatten list
-    }
-
-    println {
-      Task07 flatten2 list
-    }
+  def testTask08 {
+    val list = List('a', 'a', 'a', 'a', 'b', 'c', 'c', 'a', 'a', 'd', 'e', 'e', 'e', 'e')
+    println ( Task08 compress list )
+    println ( Task08 compress2 list )
   }
 
 }
