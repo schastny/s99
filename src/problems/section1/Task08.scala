@@ -20,7 +20,7 @@ object Task08 {
   }
 
   def compressInternal(list: List[Any], currentChar: Any): List[Any] = {
-    if (list==Nil)
+    if (list == Nil)
       list
     else if (list.head==currentChar)
       compressInternal(list.tail, currentChar)
