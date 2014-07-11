@@ -10,8 +10,9 @@ object Launcher {
 //    testTask05
 //    testTask06
 //    testTask07
-    testTask08
-    testTask09
+//    testTask08
+//    testTask09
+    testTask10
   }
 
   def testTask01 {
@@ -78,6 +79,12 @@ object Launcher {
     val list = List('a', 'a', 'a', 'a', 'b', 'c', 'c', 'a', 'a', 'd', 'e', 'e', 'e', 'e')
     println ( Task09 pack list )
     println ( Task09 pack list )
+  }
+
+  def testTask10 {
+    val list = List('a', 'a', 'a', 'a', 'b', 'c', 'c', 'a', 'a', 'd', 'e', 'e', 'e', 'e')
+    println ( Task10 encode list )
+    println ( Task10 encode list )
   }
 
 }
