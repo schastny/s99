@@ -10,32 +10,29 @@ package problems.section1
  *     X = [[4,a],b,[2,c],[2,a],d,[4,e]]<br/>
  */
 object Task11 {
-
   def encodeModified(list: List[Any]): List[Any] = {
     if (list == Nil)
       Nil
     else
       encodeInternal(list.tail, (1, list.head))
   }
-
   private def encodeInternal(list: List[Any], tuple: (Int, Any)): List[Any] = {
     if (list == Nil)
-      Enc(tuple)
+      List(Enc(tuple))
     else if (list.head == tuple._2)
       encodeInternal(list.tail, (tuple._1+1, tuple._2))
     else
       Enc(tuple) :: encodeInternal(list.tail, (1, list.head))
   }
-
 }
 
 /**
  * Only elements with duplicates are transferred as [N,E] terms.
  */
 object Enc {
-  def apply(tuple: (Int, Any)): List[Any] =
+  def apply(tuple: (Int, Any)) =
     if (tuple._1==1)
-      List(tuple._2)
+      tuple._2
     else
-      List(tuple)
+      tuple
 }
