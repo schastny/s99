@@ -1,6 +1,6 @@
 package problems.section1
 
-object Launcher {
+object Launcher01to10 {
 
   def main(args: Array[String]) {
 //    testTask01

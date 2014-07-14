@@ -13,7 +13,7 @@ object Task09 {
       packInternal(list.tail, List(list.head))
   }
 
-  def packInternal(list: List[Any], sublist: List[Any]): List[List[Any]] = {
+  private def packInternal(list: List[Any], sublist: List[Any]): List[List[Any]] = {
     if (list == Nil)
       List(sublist)
     else if (list.head==sublist.head)

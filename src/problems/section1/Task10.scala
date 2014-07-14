@@ -19,7 +19,7 @@ object Task10 {
       encodeInternal(list.tail, (1, list.head))
   }
 
-  def encodeInternal(list: List[Any], tuple: (Int, Any)): List[(Int, Any)] = {
+  private def encodeInternal(list: List[Any], tuple: (Int, Any)): List[(Int, Any)] = {
     if (list == Nil)
       List(tuple)
     else if (list.head == tuple._2)

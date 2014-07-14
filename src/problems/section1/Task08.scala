@@ -19,7 +19,7 @@ object Task08 {
       list.head :: compressInternal(list.tail, list.head)
   }
 
-  def compressInternal(list: List[Any], currentChar: Any): List[Any] = {
+  private def compressInternal(list: List[Any], currentChar: Any): List[Any] = {
     if (list == Nil)
       list
     else if (list.head==currentChar)
@@ -36,7 +36,7 @@ object Task08 {
       list.head :: compressInternal2(list.tail, list.head)
   }
 
-  def compressInternal2(list: List[Any], currentChar: Any): List[Any] = list match {
+  private def compressInternal2(list: List[Any], currentChar: Any): List[Any] = list match {
     case Nil =>
       list
     case x::xx =>
