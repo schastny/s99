@@ -15,11 +15,11 @@ object Launcher11to20 {
 
   def testTask12 {
     val sourceString = "[4,a],b,[2,c],[2,a],d,[4,e]"
-    val decodedList = Task12 decodeString sourceString
+    val sourceList = Task12 decodeString sourceString
     val targetList = List('a', 'a', 'a', 'a', 'b', 'c', 'c', 'a', 'a', 'd', 'e', 'e', 'e', 'e')
     println ( "source: " + sourceString )
-    println ( decodedList )
-    println ( "target1: " + (Task12 decode decodedList) )
+    println ( sourceList )
+    println ( "target1: " + (Task12 decode sourceList) )
     println ( "target2: " + targetList )
   }
 
